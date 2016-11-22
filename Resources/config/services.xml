@@ -8,4 +8,16 @@
         <import resource="parameters.xml"/>
         <import resource="commands.xml"/>
     </imports>
+
+    <parameters>
+        <parameter key="sigbits.roomba_bundle.command_factory.class">Sigbits\RoombaBundle\Command\Factory</parameter>
+    </parameters>
+
+    <services>
+        <service id="sigbits.roomba_bundle.command_factory" class="%sigbits.roomba_bundle.command_factory.class%">
+            <argument>%sigbits.roomba_bundle.commands%</argument>
+        </service>
+    </services>
+
+
 </container>

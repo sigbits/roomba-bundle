@@ -1,5 +1,6 @@
 <?php
 namespace Sigbits\RoombaBundle\Command;
+
 use Sigbits\RoombaLib\SCI\Command as SCICommand;
 /**
  * Created by PhpStorm.
@@ -34,7 +35,7 @@ class Factory
     {
         $this->assertIsSCICommandClass($fqcn);
 
-        $SCICommands[$name] = $fqcn;
+        $this->SCICommands[$name] = $fqcn;
     }
 
     /**
@@ -43,8 +44,8 @@ class Factory
      */
     private function assertIsSCICommandClass($fqcn)
     {
-        if (!is_a($fqcn, '\Sigbits\RoombaLib\SCI\Command')) {
-            throw new \InvalidArgumentException(sprintf('FQCN %s is not a Sigbits\RoombaLib\SCI\Command', $fqcn));
+        if (!is_subclass_of($fqcn, 'Sigbits\RoombaLib\SCI\Command')) {
+            throw new \InvalidArgumentException(sprintf('Class %s is not a Sigbits\RoombaLib\SCI\Command', $fqcn));
         }
     }
 
@@ -62,13 +63,13 @@ class Factory
      */
     private function isDataCommandClass($cmdClass)
     {
-        return (is_a($cmdClass, '\Sigbits\RoombaLib\SCI\Command\AbstractDataCommand'));
+        return (is_subclass_of($cmdClass, 'Sigbits\RoombaLib\SCI\Command\AbstractDataCommand'));
     }
 
     /**
      * @param string $name
      * @param mixed | null $data
-     * @return Command
+     * @return SCICommand
      */
     public function create($name, $data = null)
     {

@@ -5,22 +5,19 @@
         http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="sigbits.roomba.list_command">
-            sigbits:roomba:list
-        </parameter>
-        <parameter key="sigbits.roomba.execute_command">
-            sigbits:roomba:execute
-        </parameter>
+        <parameter key="sigbits.roomba_bundle.list_command">sigbits:roomba:list</parameter>
+        <parameter key="sigbits.roomba_bundle.execute_command">sigbits:roomba:execute</parameter>
     </parameters>
 
     <services>
-        <service class="Sigbits\RoombaBundle\Console\RoombaListCommand">
-            <argument type="string">%sigbits.roomba.list_command%</argument>
+        <service id="sigbits.roomba_bundle.console.list_command" class="Sigbits\RoombaBundle\Console\RoombaListCommand">
+            <argument type="string">%sigbits.roomba_bundle.list_command%</argument>
             <tag name="console.command"/>
         </service>
-        <service class="Sigbits\RoombaBundle\Console\RoombaExecuteCommand">
-            <argument type="string">%sigbits.roomba.execute_command%</argument>
-            <argument type="collection">%sigbits.roomba.sci_command.names%</argument>
+
+        <service id="sigbits.roomba_bundle.console.execute_command" class="Sigbits\RoombaBundle\Console\RoombaExecuteCommand">
+            <argument type="string">%sigbits.roomba_bundle.execute_command%</argument>
+            <argument type="service" id="sigbits.roomba_bundle.command_factory"/>
             <tag name="console.command"/>
         </service>
     </services>

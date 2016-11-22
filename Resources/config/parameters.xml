@@ -5,23 +5,39 @@
         http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter id="sigbits.roomba.sci_command.names" type="collection">
-            <parameter>baud</parameter>
-            <parameter>clean</parameter>
-            <parameter>control</parameter>
-            <parameter>drive</parameter>
-            <parameter>force_seeking_dock</parameter>
-            <parameter>full</parameter>
-            <parameter>leds</parameter>
-            <parameter>max</parameter>
-            <parameter>motors</parameter>
-            <parameter>play</parameter>
-            <parameter>power</parameter>
-            <parameter>safe</parameter>
-            <parameter>sensor</parameter>
-            <parameter>song</parameter>
-            <parameter>spot</parameter>
-            <parameter>start</parameter>
+        <parameter key="sigbits.roomba.sci_command.baud.class">Sigbits\RoombaLib\SCI\Command\Baud</parameter>
+        <parameter key="sigbits.roomba.sci_command.clean.class">Sigbits\RoombaLib\SCI\Command\Clean</parameter>
+        <parameter key="sigbits.roomba.sci_command.control.class">Sigbits\RoombaLib\SCI\Command\Drive</parameter>
+        <parameter key="sigbits.roomba.sci_command.drive.class">Sigbits\RoombaLib\SCI\Command\Baud</parameter>
+        <parameter key="sigbits.roomba.sci_command.force_seeking_dock.class">Sigbits\RoombaLib\SCI\Command\ForceSeekingDock</parameter>
+        <parameter key="sigbits.roomba.sci_command.full.class">Sigbits\RoombaLib\SCI\Command\Full</parameter>
+        <parameter key="sigbits.roomba.sci_command.leds.class">Sigbits\RoombaLib\SCI\Command\Leds</parameter>
+        <parameter key="sigbits.roomba.sci_command.max.class">Sigbits\RoombaLib\SCI\Command\Max</parameter>
+        <parameter key="sigbits.roomba.sci_command.motors.class">Sigbits\RoombaLib\SCI\Command\Motors</parameter>
+        <parameter key="sigbits.roomba.sci_command.play.class">Sigbits\RoombaLib\SCI\Command\Play</parameter>
+        <parameter key="sigbits.roomba.sci_command.power.class">Sigbits\RoombaLib\SCI\Command\Power</parameter>
+        <parameter key="sigbits.roomba.sci_command.safe.class">Sigbits\RoombaLib\SCI\Command\Safe</parameter>
+        <parameter key="sigbits.roomba.sci_command.sensors.class">Sigbits\RoombaLib\SCI\Command\Sensors</parameter>
+        <parameter key="sigbits.roomba.sci_command.song.class">Sigbits\RoombaLib\SCI\Command\Song</parameter>
+        <parameter key="sigbits.roomba.sci_command.spot.class">Sigbits\RoombaLib\SCI\Command\Spot</parameter>
+        <parameter key="sigbits.roomba.sci_command.start.class">Sigbits\RoombaLib\SCI\Command\Start</parameter>
+
+        <parameter key="sigbits.roomba_bundle.commands" type="collection">
+            <parameter key="baud">%sigbits.roomba.sci_command.baud.class%</parameter>
+            <parameter key="clean">%sigbits.roomba.sci_command.clean.class%</parameter>
+            <parameter key="control">%sigbits.roomba.sci_command.control.class%</parameter>
+            <parameter key="drive">%sigbits.roomba.sci_command.drive.class%</parameter>
+            <parameter key="force_seeking_dock">%sigbits.roomba.sci_command.force_seeking_dock.class%</parameter>
+            <parameter key="leds">%sigbits.roomba.sci_command.leds.class%</parameter>
+            <parameter key="max">%sigbits.roomba.sci_command.max.class%</parameter>
+            <parameter key="motors">%sigbits.roomba.sci_command.motors.class%</parameter>
+            <parameter key="play">%sigbits.roomba.sci_command.play.class%</parameter>
+            <parameter key="power">%sigbits.roomba.sci_command.power.class%</parameter>
+            <parameter key="safe">%sigbits.roomba.sci_command.safe.class%</parameter>
+            <parameter key="sensors">%sigbits.roomba.sci_command.sensors.class%</parameter>
+            <parameter key="song">%sigbits.roomba.sci_command.song.class%</parameter>
+            <parameter key="spot">%sigbits.roomba.sci_command.spot.class%</parameter>
+            <parameter key="start">%sigbits.roomba.sci_command.start.class%</parameter>
         </parameter>
     </parameters>
 </container>
