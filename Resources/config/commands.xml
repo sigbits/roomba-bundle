@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter id="sigbits.roomba_list_command">
+            sigbits:roomba:list
+        </parameter>
+        <parameter id="sigbits.roomba_execute_command">
+            sigbits:roomba:execute
+        </parameter>
+    </parameters>
+
+    <services>
+        <service class="SigbitsRoombaBundle\Console\RoombaListCommand">
+            <argument type="string">%sigbits.roomba.list_command%</argument>
+            <tag name="console.command"/>
+        </service>
+        <service class="SigbitsRoombaBundle\Console\RoombaExecuteCommand">
+            <argument type="string">%sigbits.roomba.execute_command%</argument>
+            <argument type="collection">%sigbits.roomba.sci_command.names%</argument>
+            <tag name="console.command"/>
+        </service>
+    </services>
+</container>

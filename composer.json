@@ -1,0 +1,29 @@
+{
+  "name": "sigbits/roomba-bundle",
+  "type": "library",
+  "description": "Symfony bundle to communicate with your Roomba vacuum cleaner",
+  "keywords": ["roomba","roowifi","symfony"],
+  "homepage": "https://github.com/sigbits/roomba-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maarten van Leeuwen",
+      "email": "maarten@sigbits.nl",
+      "homepage": "http://sigbits.nl/",
+      "role": "Author"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "symfony/http-kernel": "^3.1",
+    "sigbits/roombalib": "^0.1.0",
+    "symfony/dependency-injection": "^3.1",
+    "symfony/config": "^3.1",
+    "symfony/console": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sigbits\\RoombaBundle\\": ""
+    }
+  }
+}
