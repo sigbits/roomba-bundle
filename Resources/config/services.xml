@@ -8,7 +8,4 @@
         <import resource="parameters.xml"/>
         <import resource="commands.xml"/>
     </imports>
-
-    <services>
-    </services>
 </container>

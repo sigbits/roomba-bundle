@@ -1,5 +1,5 @@
 <?php
-namespace Sigbits\RoombaLib\Console;
+namespace Sigbits\RoombaBundle\Console;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
