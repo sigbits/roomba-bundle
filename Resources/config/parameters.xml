@@ -5,40 +5,23 @@
         http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter id="sigbits.roomba.baud.command.class">Sigbits\RoombaLib\SCI\Command\Baud</parameter>
-        <parameter id="sigbits.roomba.clean.command.class">Sigbits\RoombaLib\SCI\Command\Clean</parameter>
-        <parameter id="sigbits.roomba.control.command.class">Sigbits\RoombaLib\SCI\Command\Control</parameter>
-        <parameter id="sigbits.roomba.drive.command.class">Sigbits\RoombaLib\SCI\Command\Drive</parameter>
-        <parameter id="sigbits.roomba.force_seeking_dock.command.class">Sigbits\RoombaLib\SCI\Command\ForceSeekingDock</parameter>
-        <parameter id="sigbits.roomba.full.command.class">Sigbits\RoombaLib\SCI\Command\Full</parameter>
-        <parameter id="sigbits.roomba.leds.command.class">Sigbits\RoombaLib\SCI\Command\Leds</parameter>
-        <parameter id="sigbits.roomba.max.command.class">Sigbits\RoombaLib\SCI\Command\Max</parameter>
-        <parameter id="sigbits.roomba.motors.command.class">Sigbits\RoombaLib\SCI\Command\Motors</parameter>
-        <parameter id="sigbits.roomba.play.command.class">Sigbits\RoombaLib\SCI\Command\Play</parameter>
-        <parameter id="sigbits.roomba.power.command.class">Sigbits\RoombaLib\SCI\Command\Power</parameter>
-        <parameter id="sigbits.roomba.safe.command.class">Sigbits\RoombaLib\SCI\Command\Safe</parameter>
-        <parameter id="sigbits.roomba.sensors.command.class">Sigbits\RoombaLib\SCI\Command\Sensors</parameter>
-        <parameter id="sigbits.roomba.song.command.class">Sigbits\RoombaLib\SCI\Command\Song</parameter>
-        <parameter id="sigbits.roomba.spot.command.class">Sigbits\RoombaLib\SCI\Command\Spot</parameter>
-        <parameter id="sigbits.roomba.start.command.class">Sigbits\RoombaLib\SCI\Command\Start</parameter>
-
         <parameter id="sigbits.roomba.sci_command.names" type="collection">
-            <parameter key="baud">%sigbits.roomba.baud_command.class%</parameter>
-            <parameter key="clean">%sigbits.roomba.clean_command.class%</parameter>
-            <parameter key="control">%sigbits.roomba.control_command.class%</parameter>
-            <parameter key="drive">%sigbits.roomba.drive_command.class%</parameter>
-            <parameter key="force_seeking_dock">%sigbits.roomba.force_seeking_dock_command.class%</parameter>
-            <parameter key="full">%sigbits.roomba.full_command.class%</parameter>
-            <parameter key="leds">%sigbits.roomba.leds_command.class%</parameter>
-            <parameter key="max">%sigbits.roomba.max_command.class%</parameter>
-            <parameter key="motors">%sigbits.roomba.motors_command.class%</parameter>
-            <parameter key="play">%sigbits.roomba.max_command.class%</parameter>
-            <parameter key="power">%sigbits.roomba.power_command.class%</parameter>
-            <parameter key="safe">%sigbits.roomba.safe_command.class%</parameter>
-            <parameter key="sensor">%sigbits.roomba.sensor_command.class%</parameter>
-            <parameter key="song">%sigbits.roomba.song_command.class%</parameter>
-            <parameter key="spot">%sigbits.roomba.spot_command.class%</parameter>
-            <parameter key="start">%sigbits.roomba.start_command.class%</parameter>
+            <parameter>baud</parameter>
+            <parameter>clean</parameter>
+            <parameter>control</parameter>
+            <parameter>drive</parameter>
+            <parameter>force_seeking_dock</parameter>
+            <parameter>full</parameter>
+            <parameter>leds</parameter>
+            <parameter>max</parameter>
+            <parameter>motors</parameter>
+            <parameter>play</parameter>
+            <parameter>power</parameter>
+            <parameter>safe</parameter>
+            <parameter>sensor</parameter>
+            <parameter>song</parameter>
+            <parameter>spot</parameter>
+            <parameter>start</parameter>
         </parameter>
     </parameters>
 </container>
