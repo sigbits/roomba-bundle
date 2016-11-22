@@ -2,6 +2,7 @@
 namespace Sigbits\RoombaBundle\Console;
 
 use Sigbits\RoombaBundle\Command\Factory as RoombaCommandFactory;
+use Sigbits\RoombaBundle\Device\Repository;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -19,17 +20,23 @@ class RoombaExecuteCommand extends Command
      */
     private $factory;
 
+    /**
+     * @var Repository
+     */
+    private $repository;
+
 
     /**
      * RoombaExecuteCommand constructor.
      * @param null|string $name
      * @param RoombaCommandFactory $roombaCommandFactory
      */
-    public function __construct($name, RoombaCommandFactory $roombaCommandFactory)
+    public function __construct($name, RoombaCommandFactory $roombaCommandFactory, Repository $repository)
     {
         parent::__construct($name);
 
         $this->factory = $roombaCommandFactory;
+        $this->repository = $repository;
     }
 
     public function configure()
@@ -51,7 +58,9 @@ class RoombaExecuteCommand extends Command
         $data = $input->getArgument('data');
 
         $cmd = $this->factory->create($cmdName, $data);
+        $roomba = $this->repository->find($device);
 
+        $roomba->execute($cmd);
         $output->writeln(print_r($cmd));
     }
 }

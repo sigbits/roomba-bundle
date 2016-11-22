@@ -11,13 +11,22 @@
 
     <parameters>
         <parameter key="sigbits.roomba_bundle.command_factory.class">Sigbits\RoombaBundle\Command\Factory</parameter>
+        <parameter key="sigbits.roomba_bundle.device_repository.class">Sigbits\RoombaBundle\Device\Repository</parameter>
     </parameters>
 
     <services>
         <service id="sigbits.roomba_bundle.command_factory" class="%sigbits.roomba_bundle.command_factory.class%">
             <argument>%sigbits.roomba_bundle.commands%</argument>
         </service>
+
+        <service id="sigbits.roomba_bundle.device_repository" class="%sigbits.roomba_bundle.device_repository.class%">
+            <!-- @todo: move this to proper bundle configuration //-->
+            <call method="addDevice">
+                <argument type="string">stoffie</argument>
+                <argument>192.168.178.44</argument> <!-- socket host //-->
+                <argument>9001</argument> <!-- socket port //-->
+                <argument>30</argument> <!-- socket create timeout //-->
+            </call>
+        </service>
     </services>
-
-
 </container>

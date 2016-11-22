@@ -18,6 +18,7 @@
         <service id="sigbits.roomba_bundle.console.execute_command" class="Sigbits\RoombaBundle\Console\RoombaExecuteCommand">
             <argument type="string">%sigbits.roomba_bundle.execute_command%</argument>
             <argument type="service" id="sigbits.roomba_bundle.command_factory"/>
+            <argument type="service" id="sigbits.roomba_bundle.device_repository"/>
             <tag name="console.command"/>
         </service>
     </services>
