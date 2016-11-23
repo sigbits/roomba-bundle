@@ -27,7 +27,8 @@
             <parameter key="clean">%sigbits.roomba.sci_command.clean.class%</parameter>
             <parameter key="control">%sigbits.roomba.sci_command.control.class%</parameter>
             <parameter key="drive">%sigbits.roomba.sci_command.drive.class%</parameter>
-            <parameter key="force_seeking_dock">%sigbits.roomba.sci_command.force_seeking_dock.class%</parameter>
+            <parameter key="dock">%sigbits.roomba.sci_command.force_seeking_dock.class%</parameter>
+            <parameter key="full">%sigbits.roomba.sci_command.full.class%</parameter>
             <parameter key="leds">%sigbits.roomba.sci_command.leds.class%</parameter>
             <parameter key="max">%sigbits.roomba.sci_command.max.class%</parameter>
             <parameter key="motors">%sigbits.roomba.sci_command.motors.class%</parameter>

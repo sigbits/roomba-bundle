@@ -61,6 +61,5 @@ class RoombaExecuteCommand extends Command
         $roomba = $this->repository->find($device);
 
         $roomba->execute($cmd);
-        $output->writeln(print_r($cmd));
     }
 }
