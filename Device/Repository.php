@@ -51,7 +51,7 @@ class Repository
 
     /**
      * @param $name
-     * @return mixed
+     * @return Roomba
      * @throws \Exception
      */
     public function find($name)
