@@ -7,6 +7,25 @@
     <parameters>
         <parameter key="sigbits.roomba_bundle.list_command">sigbits:roomba:list</parameter>
         <parameter key="sigbits.roomba_bundle.execute_command">sigbits:roomba:execute</parameter>
+        <parameter key="sigbits.roomba_bundle.call_command">sigbits:roomba:call</parameter>
+        <!-- aliases for the call command //-->
+        <parameter key="sigbits.roomba_bundle.baud_command">sigbits:{device}:baud</parameter>
+        <parameter key="sigbits.roomba_bundle.clean_command">sigbits:{device}:clean</parameter>
+        <parameter key="sigbits.roomba_bundle.control_command">sigbits:{device}:control</parameter>
+        <parameter key="sigbits.roomba_bundle.drive_command">sigbits:{device}:drive</parameter>
+        <parameter key="sigbits.roomba_bundle.force_seeking_dock_command">sigbits:{device}:dock</parameter>
+        <parameter key="sigbits.roomba_bundle.full_command">sigbits:{device}:full</parameter>
+        <parameter key="sigbits.roomba_bundle.leds_command">sigbits:{device}:leds</parameter>
+        <parameter key="sigbits.roomba_bundle.max_command">sigbits:{device}:max</parameter>
+        <parameter key="sigbits.roomba_bundle.motors_command">sigbits:{device}:motors</parameter>
+        <parameter key="sigbits.roomba_bundle.play_command">sigbits:{device}:play</parameter>
+        <parameter key="sigbits.roomba_bundle.power_command">sigbits:{device}:power</parameter>
+        <parameter key="sigbits.roomba_bundle.safe_command">sigbits:{device}:safe</parameter>
+        <parameter key="sigbits.roomba_bundle.sensors_command">sigbits:{device}:sensors</parameter>
+        <parameter key="sigbits.roomba_bundle.song_command">sigbits:{device}:song</parameter>
+        <parameter key="sigbits.roomba_bundle.spot_command">sigbits:{device}:spot</parameter>
+        <parameter key="sigbits.roomba_bundle.start_command">sigbits:{device}:start</parameter>
+        <!-- end aliases for the call command //-->
     </parameters>
 
     <services>
@@ -21,5 +40,30 @@
             <argument type="service" id="sigbits.roomba_bundle.device_repository"/>
             <tag name="console.command"/>
         </service>
+
+        <service id="sigbits.roomba_bundle.console.command_command" class="Sigbits\RoombaBundle\Console\RoombaCallCommand">
+            <argument type="string">%sigbits.roomba_bundle.call_command%</argument>
+            <argument type="collection">
+                <argument type="string">%sigbits.roomba_bundle.baud_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.clean_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.control_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.drive_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.force_seeking_dock_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.full_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.leds_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.max_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.motors_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.play_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.power_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.safe_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.sensors_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.song_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.spot_command%</argument>
+                <argument type="string">%sigbits.roomba_bundle.start_command%</argument>
+            </argument>
+            <argument type="service" id="sigbits.roomba_bundle.device_repository"/>
+            <tag name="console.command"/>
+        </service>
+
     </services>
 </container>
