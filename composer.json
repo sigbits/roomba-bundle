@@ -16,10 +16,13 @@
   "require": {
     "php": ">=5.3.0",
     "symfony/http-kernel": "^3.1",
-    "sigbits/roombalib": "^0.1.0",
+    "sigbits/roombalib": "dev-develop",
     "symfony/dependency-injection": "^3.1",
     "symfony/config": "^3.1",
     "symfony/console": "^3.1"
+  },
+  "require-dev": {
+    "sigbits/roombalib": "dev-develop",
   },
   "autoload": {
     "psr-4": {

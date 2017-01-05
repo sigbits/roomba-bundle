@@ -46,7 +46,7 @@ class Factory
      */
     private function assertIsSCICommandClass($fqcn)
     {
-        if (!is_subclass_of($fqcn, 'Sigbits\RoombaLib\SCI\Command\AbstractCommand')) {
+        if (!is_subclass_of($fqcn, 'Sigbits\RoombaLib\SCI\Command')) {
             throw new \InvalidArgumentException(sprintf('Class %s is not a Sigbits\RoombaLib\SCI\Command', $fqcn));
         }
     }
