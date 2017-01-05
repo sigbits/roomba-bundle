@@ -21,9 +21,6 @@
     "symfony/config": "^3.1",
     "symfony/console": "^3.1"
   },
-  "require-dev": {
-    "sigbits/roombalib": "dev-develop",
-  },
   "autoload": {
     "psr-4": {
       "Sigbits\\RoombaBundle\\": ""
